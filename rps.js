@@ -41,10 +41,13 @@ function playRound(playerSelection, computerSelection) {
       return 'You Lose! Rock beats scissors!'
  } else if ((computerSelection == 'paper') && (playerSelection == 'scissors')) {
       return 'Player Wins! Scissors beats Paper!'
- } if ((computerSelection == 'scissors') && (playerSelection == 'scissors')) {
+ }
+      //  } if ((computerSelection == 'scissors') && (playerSelection == 'scissors')) {   
+      // Note : don't need this code just go right to the answer
+      
       return 'This is a tie! Scissors vs Scissors'
  }
-}
+// }
 const playerSelection = game;
 const computerSelection = getComputerChoice;
 
