@@ -21,42 +21,54 @@ let getComputerChoice = nut[Math.floor(Math.random()*nut.length)];
       // "computerSelection" - and then return a string that declares the winner 
       // of the round like so: "You Lose! Paper beats Rock"
 
-let game = prompt("Choose your fate!");
+let input = prompt("Choose your fate!");
 
 function playRound(playerSelection, computerSelection) {
       
   if ((computerSelection == 'rock') && (playerSelection =='rock')) {
-      return  'This is a tie! Rock vs Rock';
+         return 'Tie'
+      // return  'This is a tie! Rock vs Rock!';
  } else if ((computerSelection == 'scissors') && (playerSelection == 'rock')) {
-      return 'Player Wins! Rock beats Scissors';
+         return 'playerSelection'
+      // return 'Player Wins! Rock beats Scissors!';
  } else if ((computerSelection == 'paper') && (playerSelection == 'rock')) {
-      return "You Lose! Paper beats Rock!"
+         return 'computerSelection'
+      // return "You Lose! Paper beats Rock!"
  } else if ((computerSelection == 'rock') && (playerSelection == 'paper')) {
-    return "Player Wins! Paper beats Rock!";
+         return 'playerSelection'
+//       return "Player Wins! Paper beats Rock!";
  } else if ((computerSelection == 'scissors') && (playerSelection == 'paper')) {
-      return "You Lose! Scissors beats Paper!"
+         return 'computerSelection'
+      // return "You Lose! Scissors beats Paper!"
  }  else if ((computerSelection == 'paper') && (playerSelection == 'paper')) {
-      return 'This is a tie! Paper vs Paper'
+         return 'Tie'
+      // return 'This is a tie! Paper vs Paper!'
  } else if ((computerSelection == 'rock') && (playerSelection == 'scissors')) {
-      return 'You Lose! Rock beats scissors!'
+         return 'computerSelection'
+      // return 'You Lose! Rock beats scissors!'
  } else if ((computerSelection == 'paper') && (playerSelection == 'scissors')) {
-      return 'Player Wins! Scissors beats Paper!'
+         return 'playerSelection'
+      // return 'Player Wins! Scissors beats Paper!'
+ }       return 'Tie'
+      // return 'This is a tie! Scissors vs Scissors!'
  }
-      //  } if ((computerSelection == 'scissors') && (playerSelection == 'scissors')) {   
-      // Note : don't need this code just go right to the answer
-      
-      return 'This is a tie! Scissors vs Scissors'
- }
-// }
-const playerSelection = game;
+
+const playerSelection = input;
 const computerSelection = getComputerChoice;
+let game = playRound(playerSelection, computerSelection);
 
-console.log(playRound(playerSelection, computerSelection));
-// let game = parseFloat(prompt("Choose your fate!"))
-// for (let i = 0; i < 5; i++) {
-//       // your code here!
-//    }
+// console.log(playRound(playerSelection, computerSelection));
+// console.log(game);
 
+for (let i = 0; i < 5 ; i++) {
+     if ('Tie' <= 3) {
+      console.log("It's a Tie! Would you like to play again?");
+     } else if ('playerSelection' <= 3) {
+      console.log("Player wins! Would you like to play again?");
+     } 
+      console.log("Computer Wins! Would you like to play again?");
+     
+}   
 
 
 
